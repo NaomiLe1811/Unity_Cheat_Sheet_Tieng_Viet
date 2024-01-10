@@ -15,6 +15,7 @@ Bản Unity cheat sheet phiên dịch cho cộng đồng người Việt từ Na
   - [Vectors](#vectors)
   - [Quaternion](#quaternion)
   - [Góc Euler](#góc-euler)
+  - [Giữ Tỉ Lệ Màn Hình](#giữ-tỉ-lệ-màn-hình)
 - [Di Chuyển & Xoay](#di-chuyển--xoay)
   - [Di Chuyển Đối Tượng](#di-chuyển-đối-tượng)
     - [Transform.Translate()](#transformtranslate)
@@ -35,7 +36,6 @@ Bản Unity cheat sheet phiên dịch cho cộng đồng người Việt từ Na
   - [Chuột](#chuột)
   - [Chạm](#chạm)
 - [Giao Diện Người Dùng (UI)](#giao-diện-người-dùng-ui)
-  - [Giữ Tỉ Lệ Màn Hình](#giữ-tỉ-lệ-màn-hình)
   - [Nút (Button)](#nút-button)
   - [Thanh Trượt (Slider)](#thanh-trượt-slider)
 - [Âm Thanh](#âm-thanh)
@@ -272,6 +272,40 @@ Chuyển đổi góc Quaternion của một transform thành góc Euler
 Quaternion quaternionAngles = transform.rotation;
 Vector3 eulerAngles = quaternionAngles.eulerAngles;
 ```
+### Giữ Tỉ Lệ Màn Hình
+```csharp
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ScaleBackground : MonoBehaviour
+{
+    private SpriteRenderer background;
+    private Camera cam;
+
+    void Start()
+    {
+        background = GetComponent<SpriteRenderer>();
+        cam = Camera.main;
+
+        // Lấy kích thước của camera
+        float cameraHeight = 2f * cam.orthographicSize;
+        float cameraWidth = cameraHeight * cam.aspect;
+
+        // Lấy kích thước của nền hiện tại
+        float bgHeight = background.sprite.bounds.size.y;
+        float bgWidth = background.sprite.bounds.size.x;
+
+        // Tính tỉ lệ tỷ lệ
+        float scaleX = cameraWidth / bgWidth;
+        float scaleY = cameraHeight / bgHeight;
+
+        // Áp dụng tỷ lệ cho nền
+        transform.localScale = new Vector3(scaleX, scaleY, 1f);
+    }
+  }
+}
+```
 ## Di Chuyển & Xoay
 ### Di Chuyển Đối Tượng
 #### Transform.Translate()
@@ -461,46 +495,10 @@ if (Input.touchCount > 0) {
 ```
 
 ## Giao Diện Người Dùng (UI)
-### Giữ Tỉ Lệ Màn Hình
-```csharp
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class ScaleBackground : MonoBehaviour
-{
-    private SpriteRenderer background;
-    private Camera cam;
-
-    void Start()
-    {
-        background = GetComponent<SpriteRenderer>();
-        cam = Camera.main;
-
-        // Lấy kích thước của camera
-        float cameraHeight = 2f * cam.orthographicSize;
-        float cameraWidth = cameraHeight * cam.aspect;
-
-        // Lấy kích thước của nền hiện tại
-        float bgHeight = background.sprite.bounds.size.y;
-        float bgWidth = background.sprite.bounds.size.x;
-
-        // Tính tỉ lệ tỷ lệ
-        float scaleX = cameraWidth / bgWidth;
-        float scaleY = cameraHeight / bgHeight;
-
-        // Áp dụng tỷ lệ cho nền
-        transform.localScale = new Vector3(scaleX, scaleY, 1f);
-    }
-  }
-}
-```
 
 ```csharp
 
 ### Nút (Button)
-
-```csharp
 // Button được sử dụng để xử lý sự nhấn và tương tác của người dùng.
 // Gắn kịch bản này vào một thành phần Button để phản ứng với sự nhấp vào nút.
 
