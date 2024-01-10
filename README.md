@@ -6,6 +6,7 @@ Bản Unity cheat sheet phiên dịch cho cộng đồng người Việt từ Na
 - [Cơ bản](#cơ-bản)
   - [Phím tắt Unity](#phím-tắt-unity)
   - [MonoBehaviour](#monobehaviour)
+  - [Sự kiện vật lý(Physics Events)](#sự-kiện-vật-lý)
   - [Serializing](#serializing)
   - [Khởi tạo](#khởi-tạo)
   - [Tìm Đối Tượng Trong Game](#tìm-đối-tượng-trong-game)
@@ -97,6 +98,66 @@ OnDisable(): Thực thi khi đối tượng trò chơi bị tắt.
 OnDestroy(): Được kích hoạt khi đối tượng trò chơi bị hủy.
 ```
 Có một hàm vòng đời được gọi là `FixedUpdate`, được kích hoạt một số lần cố định mỗi giây. Bạn có thể cấu hình tần suất trong `Edit ▸ Project Settings ▸ Time ▸ Fixed Timestep`.
+
+## Sự kiện vật lý
+Nếu bạn thêm một thành phần collider vào một đối tượng trong game, bạn có thể phát hiện sự kiện va chạm từ các thành phần của bạn bằng cách định nghĩa một bộ phận cụ thể của các phương thức. Các phương thức sau chỉ được gọi khi bạn có một Collider hoặc Rigid Body component trên cả hai đối tượng trong game.
+- OnCollisionEnter - Phương thức này được gọi một lần khi một đối tượng khác va chạm với đối tượng game hiện tại.
+- OnCollisionStay - Phương thức này được gọi trong mỗi khung hình khi một đối tượng khác va chạm với đối tượng game hiện tại.
+- OnCollisionExit - Phương thức này được gọi một lần khi một đối tượng rời khỏi vùng va chạm của đối tượng hiện tại.
+
+```csharp
+private void OnCollisionEnter(Collision hit) {
+  Debug.Log($"{gameObject.name} hits {hit.gameObject.name}");
+}
+private void OnCollisionStay(Collision hit) {
+  Debug.Log($"{gameObject.name} is hitting {hit.gameObject.name}");
+}
+private void OnCollisionExit(Collision hit) {
+  Debug.Log($"{gameObject.name} stopped hitting {hit.gameObject.name}");
+}
+```
+Các hàm sau chỉ được gọi khi tùy chọn "On Trigger" được bật từ thành phần collider tương ứng.
+-OnTriggerEnter - Hàm này được gọi khi một đối tượng khác va chạm với đối tượng game hiện tại.
+-OnTriggerStay - Hàm này được gọi trong mỗi khung hình khi một đối tượng khác va chạm với đối tượng game hiện tại.
+-OnTriggerExit - Hàm này được gọi một lần khi một đối tượng rời khỏi vùng va chạm của đối tượng hiện tại.
+```csharp
+private void OnTriggerEnter(Collider hit) {
+  Debug.Log($"{gameObject.name} hits {hit.gameObject.name}");
+}
+private void OnTriggerStay(Collider hit) {
+  Debug.Log($"{gameObject.name} is hitting {hit.gameObject.name}");
+}
+private void OnTriggerExit(Collider hit) {
+  Debug.Log($"{gameObject.name} stopped hitting {hit.gameObject.name}");
+}
+```
+Cuối cùng, có các hàm tương ứng cho các collider 2D. Các hàm này chia sẻ cùng tên với các hàm 3D, nhưng có từ "2D" được thêm vào cuối. Tương tự, kiểu tham số cũng giống nhau, nhưng thay vì Collision, ta có Collision2D.
+- OnCollisionEnter2D
+- OnCollisionStay2D
+- OnCollisionExit2D
+- OnTriggerEnter2D
+- OnTriggerStay2D
+- OnTriggerExit2D
+```csharp
+private void OnCollisionEnter2D(Collision2D hit) {
+  Debug.Log($"{gameObject.name} hits {hit.gameObject.name}");
+}
+private void OnCollisionStay2D(Collision2D hit) {
+  Debug.Log($"{gameObject.name} is hitting {hit.gameObject.name}");
+}
+private void OnCollisionExit2D(Collision2D hit) {
+  Debug.Log($"{gameObject.name} stopped hitting {hit.gameObject.name}");
+}
+private void OnTriggerEnter2D(Collision2D hit) {
+  Debug.Log($"{gameObject.name} hits {hit.gameObject.name}");
+}
+private void OnTriggerStay2D(Collision2D hit) {
+  Debug.Log($"{gameObject.name} is hitting {hit.gameObject.name}");
+}
+private void OnTriggerExit2D(Collision2D hit) {
+  Debug.Log($"{gameObject.name} stopped hitting {hit.gameObject.name}");
+}
+```
 
 ### Serializing
 Unity có khả năng serialize các biến, chuyển đổi dữ liệu thành một định dạng có thể chỉnh sửa từ trình soạn thảo Unity. Quá trình serialization phụ thuộc vào các thuộc tính hoặc các trình điều khiển truy cập được áp dụng cho biến.
