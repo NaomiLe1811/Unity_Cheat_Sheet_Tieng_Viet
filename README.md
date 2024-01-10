@@ -6,7 +6,7 @@ Bản Unity cheat sheet phiên dịch cho cộng đồng người Việt từ Na
 - [Cơ bản](#cơ-bản)
   - [Phím tắt Unity](#phím-tắt-unity)
   - [MonoBehaviour](#monobehaviour)
-  - [Sự kiện vật lý(Physics Events)](#sự-kiện-vật-lý)
+  - [Sự kiện vật lý (Physics Events)](#sự-kiện-vật-lý)
   - [Serializing](#serializing)
   - [Khởi tạo](#khởi-tạo)
   - [Tìm Đối Tượng Trong Game](#tìm-đối-tượng-trong-game)
