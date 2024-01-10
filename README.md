@@ -44,7 +44,7 @@ Bản Unity cheat sheet phiên dịch cho cộng đồng người Việt từ Na
 - [Mô Hình Thiết Kế](#mô-hình-thiết-kế)
   - [Singleton](#singleton)
 - [Các Ứng Dụng Thực Tế](#các-ứng-dụng-thực-tế)
-- - [Refernces](#refernces)
+- [Refernces](#refernces)
 
  ## Cơ Bản
 
@@ -632,7 +632,9 @@ public class AnotherClass: MonoBehaviour {
     }
 }
 ```
-### References
+## References
+
 LUIS RAMIREZ JR. (Unity Game Development Cheat Sheet)
+
 Ozan Kaşıkçı (Unity Cheat Sheet)
 
