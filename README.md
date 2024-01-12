@@ -50,34 +50,35 @@ Bản Unity cheat sheet phiên dịch cho cộng đồng người Việt từ Na
 
 ### Phím tắt Unity
   
-  | Hành động                         | Phím tắt                                             |
-| ---------------------------------- | ---------------------------------------------------- |
-| Công cụ Xem (View Tool            |Q                                                        |
-| Công cụ Di Chuyển (Move Tool)     |W                                                        |
-| Công cụ Xoay (Rotate Tool)        |E                                                        |
-| Công cụ Thay Đổi Kích Thước (Scale Tool)      |R                                                        |
-| Công cụ Hình Chữ Nhật (Rect Tool)            |T                                                        |
-| Công cụ Biến Đổi (Transform Tool)                 |Y                                                        |
-| Đối Tượng Trò Chơi Mới (New Game Object)         |Windows: CTRL + SHIFT + N <br> Mac: CMD + SHIFT + N      |
-| Đối Tượng Con Mới (New Child Game Object)                |ALT + SHIFT + N                                          |
-| Nhân Bản (Duplicate)               |Windows: CTRL + D <br> Mac: CMD +D                       |              
-| Chuyển đổi Kích thước cửa sổ (Toggle Window Size)      |SHIFT + SPACE                                            |
-| Chơi/Tạm Dừng (Play/Pause)        |Windows: CTRL + P <br> Mac: CMD + P                      |                            
-| Tập Trung Đối Tượng Trò Chơi (Focus Game Object)      |F                                                        |
+  | Hành động                                         | Phím tắt                                            |
+  | ------------------------------------------------- | --------------------------------------------------- |
+  | Công cụ Xem (View Tool )                          | Q                                                   |
+  | Công cụ Di Chuyển (Move Tool)                     | W                                                   |
+  | Công cụ Xoay (Rotate Tool)                        | E                                                   |
+  | Công cụ Thay Đổi Kích Thước (Scale Tool)          | R                                                   |
+  | Công cụ Hình Chữ Nhật (Rect Tool)                 | T                                                   |
+  | Công cụ Biến Đổi (Transform Tool)                 | Y                                                   |
+  | Đối Tượng Trò Chơi Mới (New Game Object)          | Windows: CTRL + SHIFT + N <br> Mac: CMD + SHIFT + N |
+  | Đối Tượng Con Mới (New Child Game Object)         | ALT + SHIFT + N                                     |
+  | Nhân Bản (Duplicate)                              | Windows: CTRL + D <br> Mac: CMD +D                  |
+  | Chuyển đổi Kích thước cửa sổ (Toggle Window Size) | SHIFT + SPACE                                       |
+  | Chơi/Tạm Dừng (Play/Pause)                        | Windows: CTRL + P <br> Mac: CMD + P                 |
+  | Tập Trung Đối Tượng Trò Chơi (Focus Game Object)  | F                                                   |
 ### Visual Studio Code
 
-  | Hành động                         | Phím tắt                                             |
-| ---------------------------------- | ---------------------------------------------------- |
-| Command Palette                  | Windows: CTRL + SHIFT + P Mac: CMD + SHIFT + P            |
-| Quick File Open                   | Windows: CTRL + P Mac: CMD + P                           |
-| Toggle Sidebar                    | Windows: CTRL + B Mac: CMD + B                           |
-| Multi-Select Cursor               | Windows: CTRL + D Mac: CMD + D                           |
-| Copy Line                         | Windows: SHIFT + ALT + UP or SHIFT + ALT + DOWN Mac: OPT + SHIFT + UP or OPT + SHIFT + DOWN |
-| Comment Code Block                | Windows: SHIFT + ALT + A (Multi-line comment), CTRL + K + C (Single-line comment) Mac: SHIFT + OPT + A |
-| Show All Symbols                  | Windows: CTRL + T Mac: CMD + T                           |
-| Trigger suggestion and parameter hints | Windows: Ctrl + Space, Ctrl + Shift + Space Mac: CMD + Space, CMD + Shift + Space |
-| Show References                   | Windows: Shift + F12 Mac: Shift + F12                    |
-| Global Find                       | Windows: CTRL + SHIFT + F Mac: CMD + SHIFT + F            |
+  | Hành động                              | Phím tắt                                                                                               |
+  | -------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+  | Command Palette                        | Windows: CTRL + SHIFT + P Mac: CMD + SHIFT + P                                                         |
+  | Quick File Open                        | Windows: CTRL + P Mac: CMD + P                                                                         |
+  | Toggle Sidebar                         | Windows: CTRL + B Mac: CMD + B                                                                         |
+  | Multi-Select Cursor                    | Windows: CTRL + D Mac: CMD + D                                                                         |
+  | Copy Line                              | Windows: SHIFT + ALT + UP or SHIFT + ALT + DOWN Mac: OPT + SHIFT + UP or OPT + SHIFT + DOWN            |
+  | Comment Code Block                     | Windows: SHIFT + ALT + A (Multi-line comment), CTRL + K + C (Single-line comment) Mac: SHIFT + OPT + A |
+  | Show All Symbols                       | Windows: CTRL + T Mac: CMD + T                                                                         |
+  | Trigger suggestion and parameter hints | Windows: Ctrl + Space, Ctrl + Shift + Space Mac: CMD + Space, CMD + Shift + Space                      |
+  | Show References                        | Windows: Shift + F12 Mac: Shift + F12                                                                  |
+  | Global Find                            | Windows: CTRL + SHIFT + F Mac: CMD + SHIFT + F                                                         |
+  | Focus and Select Breadcrumbs           | Windows: CTRL + SHIFT + . MAC: CMD + SHIFT + .                                                                                              |
 
 ### [MonoBehaviour](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html)
 [Đồ thị vòng Lifecycle của MonoBehaviour](https://docs.unity3d.com/uploads/Main/monobehaviour_flowchart.svg)
